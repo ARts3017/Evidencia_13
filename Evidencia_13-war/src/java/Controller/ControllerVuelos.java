@@ -33,6 +33,11 @@ public class ControllerVuelos implements Serializable {
     {
         return facadeVuelos.findAll();
     }
+    
+    public void InsertVuelos(Vuelos vuelos)
+    {
+        facadeVuelos.create(vuelos);
+    }
    
     
 }

@@ -22,6 +22,7 @@ public class ControllerEstados implements Serializable {
 
     @EJB
     private Facade.EstadosFacade facadeEstados;
+    private Estados estado=new Estados();
     /**
      * Creates a new instance of ControllerEstados
      */
@@ -32,4 +33,13 @@ public class ControllerEstados implements Serializable {
     {
         return facadeEstados.findAll();
     }
+
+    public Estados getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estados estado) {
+        this.estado = estado;
+    }
+    
 }

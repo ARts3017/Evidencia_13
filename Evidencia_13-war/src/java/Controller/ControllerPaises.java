@@ -22,6 +22,7 @@ public class ControllerPaises implements Serializable {
     
     @EJB
     private Facade.PaisesFacade facadePaises;
+    private Paises paises=new Paises();
 
     /**
      * Creates a new instance of ControllerPaises
@@ -33,4 +34,19 @@ public class ControllerPaises implements Serializable {
     {
         return facadePaises.findAll();
     }
+    
+    public void AddPaises(Paises pais)
+    {
+        facadePaises.create(pais);
+    }
+
+    public Paises getPaises() {
+        return paises;
+    }
+
+    public void setPaises(Paises paises) {
+        this.paises = paises;
+    }
+    
+    
 }

@@ -6,6 +6,7 @@
 package Controller;
 
 import Entity.Ciudades;
+import Facade.CiudadesFacade;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
@@ -22,6 +23,15 @@ public class ControlerCiudades implements Serializable {
     
     @EJB
     private Facade.CiudadesFacade facadeCiudades;
+    Ciudades ciudad=new Ciudades();
+
+    public Ciudades getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(Ciudades ciudad) {
+        this.ciudad = ciudad;
+    }
 
     /**
      * Creates a new instance of ControlerCiudades
@@ -34,5 +44,13 @@ public class ControlerCiudades implements Serializable {
     {
         return facadeCiudades.findAll();
     }
+    
+    
+    public void AddCiudad(Ciudades ciudad)
+    {
+        
+    }
+
+   
     
 }
